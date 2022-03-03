@@ -8,7 +8,7 @@ namespace SortingAlgorithems
         {
             int[] arr = { 6, 1, 8, 4, 2, 9 };
             //SortsMethods.SelectionSort(arr);
-            //SortsMethods.BubbleSort(arr);
+           // SortsMethods.BubbleSort(arr);
             SortsMethods.InsertionSort(arr);
             
             

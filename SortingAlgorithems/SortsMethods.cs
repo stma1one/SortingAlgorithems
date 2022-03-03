@@ -17,7 +17,11 @@ namespace SortingAlgorithems
         /// <param name="arr"></param>
         public static void SelectionSort(int[] arr)
         {
-            
+            for (int i = 0; i < arr.Length; i++)
+            {
+                int minIndex = SortingHelpers.MinIndex(arr, i, arr.Length - 1);
+                SortingHelpers.Swap(arr, minIndex, i);
+            }
         }
 
         #endregion
@@ -32,8 +36,21 @@ namespace SortingAlgorithems
         /// <param name="arr"></param>
         public static void BubbleSort(int[] arr)
         {
+            bool isSwap = false;
             //לולאה חיצונית מסוף המערך עד התא הראשון
-            //...
+            for(int i=arr.Length-1;i>0 && !isSwap; i--)
+            {
+                isSwap = true;
+                for(int j=0;j<i;j++)
+                {
+                    if(arr[j]>arr[j+1])
+                    {
+                        SortingHelpers.Swap(arr, j, j + 1);
+                        isSwap = false;
+                    }
+                }
+
+            }
             //לולאה פנימית מתא 0 עד המצביע של הלולאה החיצונית
 
         }
@@ -43,9 +60,23 @@ namespace SortingAlgorithems
 
         public static void InsertionSort(int[] arr)
         {
+            for (int lastSorted =1; lastSorted < arr.Length; lastSorted++)
+            {
+                int current = arr[lastSorted];
+                int i = 0;
+                //למצוא את המיקום שאליו יש להכניס את הערך שנמצא ב
+                //current
+                while(i<lastSorted&&arr[i]<current)
+                {
+                    i++;
+                }
+                //i - מכיל את המיקום של התא שאליו current צריך להכנס
+                SortingHelpers.Shift(arr, lastSorted, i);
+                arr[i] = current;
+            }
            
 
-            }
+        }
          
         
         #endregion

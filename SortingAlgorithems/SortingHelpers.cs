@@ -7,6 +7,18 @@ namespace SortingAlgorithems
     public class SortingHelpers
 
     {
+        /// <summary>
+        /// פעולה המחזירה את המיקום המקסימלי במערך
+        /// בין שני מיקומים
+        /// הנחות יסוד: 
+        /// start<=end
+        /// start>=0
+        /// end<=arr.Length-1
+        /// </summary>
+        /// <param name="arr"> מערך מספרים</param>
+        /// <param name="start">מיקום ממנו להתחיל לחפש</param>
+        /// <param name="end"> מיקום האחרון לחיפוש</param>
+        /// <returns>מיקום של הערך המקסימלי במערך</returns>
         public static int MaxIndex(int[] arr, int start, int end)
         {
             int maxindex = start;
@@ -22,6 +34,18 @@ namespace SortingAlgorithems
             return maxindex;
         }
 
+        /// <summary>
+        /// פעולה המחזירה את המיקום המינימלי במערך
+        /// בין שני מיקומים
+        /// הנחות יסוד: 
+        /// start<=end
+        /// start>=0
+        /// end<=arr.Length-1
+        /// </summary>
+        /// <param name="arr"> מערך מספרים</param>
+        /// <param name="start">מיקום ממנו להתחיל לחפש</param>
+        /// <param name="end"> מיקום האחרון לחיפוש</param>
+        /// <returns>מיקום של הערך המינימלי במערך</returns>
         public static int MinIndex(int[] arr, int start, int end)
         {
             int minindex = start;
@@ -37,6 +61,13 @@ namespace SortingAlgorithems
             return minindex;
         }
 
+        /// <summary>
+        /// פעולה המקבלת מערך ומחליפה את הערכים בין התאים 
+        /// i, j
+        /// </summary>
+        /// <param name="arr">מערך מספרים שלמים</param>
+        /// <param name="i"> מיקום התא הראשון</param>
+        /// <param name="j">מיקום התא השני</param>
         public static void Swap(int[] arr, int i, int j)
         {
             int temp = arr[i];
@@ -44,6 +75,12 @@ namespace SortingAlgorithems
             arr[j] = temp;
         }
 
+        /// <summary>
+        /// פעולה המזיזה את הערכים שמאלה בין שני מיקומים
+        /// </summary>
+        /// <param name="arr">מערך מספרים שלמים</param>
+        /// <param name="from">נקודת התחלה של ההזזה</param>
+        /// <param name="to">נקודת סיום של ההזה</param>
         public static void Shift(int[] arr, int from, int to)
         {
             for (int i = from; i > to; i--)
@@ -52,6 +89,19 @@ namespace SortingAlgorithems
             }
         }
 
+        /// <summary>
+        /// חיפוש בינארי במערך
+        /// </summary>
+        /// <param name="arr">מערך ממוין</param>
+        /// <param name="x">הערך לחיפוש</param>
+        /// <returns>אמת אם נמצא שקר אחרת</returns>
+        public static bool BinarySearch(int[] arr, int x)
+        {
+
+            return true;
+
+
+        }
 
     }
 }
