@@ -91,14 +91,33 @@ namespace SortingAlgorithems
 
         /// <summary>
         /// חיפוש בינארי במערך
+        /// אריה במדבר
         /// </summary>
         /// <param name="arr">מערך ממוין</param>
         /// <param name="x">הערך לחיפוש</param>
         /// <returns>אמת אם נמצא שקר אחרת</returns>
         public static bool BinarySearch(int[] arr, int x)
         {
+            int left = 0, right = arr.Length - 1,middle;
 
-            return true;
+            while(left<=right)
+            {
+                middle = (left + right) / 2;
+                if (arr[middle] == x)
+                    return true;
+                if(x>middle)
+                {
+                    left = middle + 1;
+
+                }
+                else
+                {
+                    right = middle - 1;
+                }
+
+            }
+
+            return false;
 
 
         }
